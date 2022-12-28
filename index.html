@@ -20,34 +20,51 @@
         <div class="weather-app">
           <form id="search-form" class="my-form">
             <div class="row">
-              <div class="col-9">
-                <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autocomplete="off"/>
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="btn btn-primary w-100"
-                />
-              </div>
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
             </div>
-          </form>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
           <h1 id="city"></h1>
           <ul>
             <li id="date"></li>
             <li id="description"></li>
           </ul>
-          <div class="d-flex weather-temperature">
-            <img src="" alt="Clear" id="icon" />
-            <div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+              <img src="" alt="Clear" id="icon" />
+              <div>
               <strong id="temperature"></strong
               ><span class="units"> °C</span>
             </div>
           </div>
-         
+          </div>
+         </div>
             <div class="col-md-6">
               <ul>
-                
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
@@ -67,3 +84,5 @@
     <script src="src/app.js"></script>
   </body>
 </html>
+
+
