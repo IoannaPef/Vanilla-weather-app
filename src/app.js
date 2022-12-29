@@ -35,12 +35,14 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
+    let iconElement = document.querySelector("#icon");
   document
     .querySelector("#icon")
     .setAttribute(
       "src",
       `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
+    iconElement.setAttribute("alt", response.data.condition.icon);
 }
 
 function searchCity(city) {
@@ -88,4 +90,4 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 
 
-searchCity("berlin");
+searchCity("zug");
