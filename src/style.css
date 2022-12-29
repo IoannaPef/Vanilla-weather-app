@@ -23,33 +23,54 @@ li {
   line-height: 1;
   list-style: none;
 }
-
+li:first-letter {
+  text-transform: capitalize;
+}
 .weather-app {
   border: 1px solid #dadde1;
-  padding: 15px;
+  padding: 35px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 600px;
 }
-
-.weather-icon {
+.weather-app-wrapper {
+  width: 600px;
+  margin: 30px auto;
+}
+#icon {
   height: 64px;
   width: 64px;
   margin-right: 10px;
 }
 
-.temperature {
+#temperature {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 65px;
   font-weight: 400;
   line-height: 1;
+  padding: -10;
 }
 
 .units {
   position: relative;
-  top: -34px;
+  top: -35px;
+  font-size: large;
 }
 
-.search-form {
+#search-form {
   margin-bottom: 20px;
+}
+#celsius-link {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+#celsius-link:hover {
+  text-decoration: none;
+}
+#fahrenheit-link {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+#fahrenheit-link:hover{
+   text-decoration: none;
 }
