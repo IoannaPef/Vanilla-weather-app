@@ -1,5 +1,5 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -26,15 +26,20 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+#align{
+  position:relative;
+  bottom: 60px;
+  right: 70px;
+}
 .weather-app {
-  border: 1px solid #dadde1;
+  border: 2px solid #dadde1;
   padding: 35px;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 8px;
   max-width: 600px;
 }
 .weather-app-wrapper {
-  width: 600px;
+  width: 500px;
   margin: 30px auto;
 }
 #icon {
