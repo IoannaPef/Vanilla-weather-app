@@ -28,8 +28,7 @@ li:first-letter {
 }
 
 .weather-app {
-  background-image: url("image/pexels.jpg");
-  background-size: cover;
+
   border: 2px solid #dadde1;
   padding: 35px;
   border-radius: 6px;
