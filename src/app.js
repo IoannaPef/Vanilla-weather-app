@@ -25,7 +25,7 @@ function formatDate(date) {
 
 function changeDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = date.getDate();
+  let day = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -54,18 +54,16 @@ function displayForecast(response) {
                   forecastDay.time
                 )}</div>
                 <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icon/${
-                    response.data.condition.icon
-                  }.png"
+                  src="${forecastDay.condition.icon_url}"
                   alt=""
                   width="42"
                 />
                  <div class="weather-forecast-temp">
                   <span class="weather-forecast-temp-max">${Math.round(
-                    forecastDay.data.daily.temperature.maximum
+                    forecastDay.temperature.maximum
                   )}°</span>
                   <span class="weather-forecast-temp-min">${Math.round(
-                    forecastDay.data.daily.temperature.minimum
+                    forecastDay.temperature.minimum
                   )}°</span>
                 </div>
               </div>
@@ -79,7 +77,7 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "1f5fdcf1ceb4ff37fcotf403ad4e9bc8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
