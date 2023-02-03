@@ -93,3 +93,11 @@ li:first-letter {
   padding: 20px;
 }
 
+@media(max-width:900px){
+  .weather-app-wrapper{
+    width: 100%;
+  }
+  .weather-forecast-date{
+    font-size: 10px;
+  }
+}
