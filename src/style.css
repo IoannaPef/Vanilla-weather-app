@@ -1,5 +1,8 @@
 body {
+  background-image: url("/src/image/weather.jpg");
   font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -27,11 +30,7 @@ li:first-letter {
 }
 
 .weather-app {
-  background: linear-gradient(
-    181.2deg,
-    rgb(181, 239, 249) 10.5%,
-    rgb(254, 254, 254) 86.8%
-  );
+  
   border: 2px solid #dadde1;
   padding: 35px;
   border-radius: 6px;
@@ -101,3 +100,8 @@ li:first-letter {
     font-size: 10px;
   }
 }
+background: linear-gradient(
+    181.2deg,
+    rgb(181, 239, 249) 10.5%,
+    rgb(254, 254, 254) 86.8%
+  );
